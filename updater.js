@@ -3,7 +3,7 @@ const APP_VERSION = require('./package.json').version
 
 /* IMPORTANT!
   This url will need to be modified for yours */
-const AUTO_UPDATE_URL = 'https://api.update.rocks/update/github.com/ofertaculos/teste/stable/' + process.platform + '/' + APP_VERSION
+const AUTO_UPDATE_URL = 'https://api.update.rocks/update/github.com/ofertaculos/teste32/stable/' + process.platform + '/' + APP_VERSION
 
 function init () {
   if (process.platform === 'linux') {
