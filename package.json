@@ -1,7 +1,7 @@
 {
   "name": "Ofertaculos",
   "homepage" : "https://www.ofertaculos.com.br/",
-  "version": "1.0.0",
+  "version": "1.0.2",
   "description": "Ofertáculos muito mais que ofertas!",
   "main": "main.js",
   "icon": "res/img/logo.png",
@@ -11,7 +11,7 @@
     "dist": "electron-builder",
     "bwin": "electron-builder build --win --publish never",
     "bmac": "electron-builder build --mac --publish never",
-    "dwin": "electron-builder build --win --ia32 --x64 --publish always",
+    "dwin": "electron-builder build --win --publish always",
     "dmac": "electron-builder build --win --publish always"
   },
   "repository": {
