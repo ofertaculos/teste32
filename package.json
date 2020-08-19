@@ -1,0 +1,82 @@
+{
+  "name": "Ofertaculos",
+  "homepage" : "https://www.ofertaculos.com.br/",
+  "version": "1.0.4",
+  "description": "Ofertáculos muito mais que ofertas!",
+  "main": "main.js",
+  "icon": "res/img/logo.png",
+  "scripts": {
+    "test": "test",
+    "dev": "electron ./main.js",
+    "dist": "electron-builder",
+    "bwin": "electron-builder build --win --publish never",
+    "bmac": "electron-builder build --mac --publish never",
+    "dwin": "electron-builder build --win --ia32 --x64 --publish always",
+    "dmac": "electron-builder build --win --publish always"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/ofertaculos/teste.git"
+  },
+  
+  "build": {
+    "publish": [
+      {
+        "provider": "github",
+        "token": "46e8041ce70a4fd1e0c5257a311d0caa405a10ad"
+      }
+    ],
+    "appId": "com.ofertaculos",
+    "files": [
+      "res/**/*",
+      "main.js",
+      "index.html",
+      "node_modules/**/*"
+    ],
+    "directories": {
+      "output": "build",
+      "buildResources": "assets"
+    },
+    "copyright": "Ofertáculos © 2020",
+    "productName": "Ofertáculos",
+    "target": "nsis",
+    "nsis": {
+      "allowToChangeInstallationDirectory": true,
+      "oneClick": false,
+      "createStartMenuShortcut": true,
+      "createDesktopShortcut": true,
+      "shortcutName": "Ofertáculos",
+      "perMachine" : true
+    },
+    "win": {
+      "target": [
+        {
+          "target": "nsis",
+          "arch": [
+            "x64",
+            "ia32"
+          ]
+        }
+      ],
+      "icon": "res/img/logo.png",
+      "verifyUpdateCodeSignature": false
+    },
+    "mac": {
+      "target": "dmg",
+      "icon": "res/img/icon.icns"
+    }
+  },
+  "author": "OFERTACULOS DESENVOLVIMENTO DE SISTEMAS LTDA",
+  "license": "COMERCIAL",
+  "devDependencies": {
+    "electron": "^9.1.0",
+    "electron-builder": "^22.7.0",
+    "electron-packager": "^15.0.0"
+  },
+  "dependencies": {
+    "electron-updater": "^4.3.1",
+    "hammerjs": "^2.0.8",
+    "jquery": "^3.5.1",
+    "raphael": "^2.3.0"
+  }
+}
